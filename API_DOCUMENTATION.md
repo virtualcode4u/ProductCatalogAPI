@@ -46,6 +46,7 @@ GET /api/v1/products
     }
 }
 
+```
 ### **2. Get a List of Products (Paginated)**
 **Endpoint:**  
 
@@ -78,6 +79,7 @@ GET /api/v1/products
         "last_page": 5
     }
 }
+```
 
 ### **1. Get a List of Products (Paginated)**
 **Endpoint:**  
