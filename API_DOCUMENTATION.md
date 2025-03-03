@@ -6,7 +6,7 @@ This documentation provides details on the available API endpoints for the **Pro
 
 ## **Base URL**  
 
-http://your-domain.com/api/v1
+http://productcatalog.com/api/
 
 
 ---
@@ -16,7 +16,7 @@ http://your-domain.com/api/v1
 ### **1. Get a Single Product**
 **Endpoint:**  
 
-GET /api/v1/products/{id}
+GET /api/products/{id}
 
 **Query Parameters (Optional):**  
 
@@ -38,10 +38,10 @@ GET /api/v1/products/{id}
 }
 
 ```
-### **3. Create a Product**
+### **2. Create a Product**
 **Endpoint:**  
 
-POST /api/v1/products
+POST /api/products
 
 **Query Parameters (Optional):**  
 
@@ -82,10 +82,10 @@ POST /api/v1/products
 }
 
 ```
-### **4. Update a Product**
+### **3. Update a Product**
 **Endpoint:**  
 
-POST /api/v1/products/{id}
+PUT /api/products/{id}
 
 **Query Parameters (Optional):**  
 
@@ -119,10 +119,10 @@ POST /api/v1/products/{id}
 
 ```
 
-### **5. Delete a Product**
+### **4. Delete a Product**
 **Endpoint:**  
 
-DELETE /api/v1/products/{id}
+DELETE /api/products/{id}
 
 **Query Parameters (Optional):**  
 
@@ -134,6 +134,47 @@ DELETE /api/v1/products/{id}
 ```json
 {
     "message": "Product deleted successfully"
+}
+```
+
+### **5. Get All Categories**
+**Endpoint:**  
+
+GET /api/categories
+
+**Response Example:** 
+```json
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Electronics",
+            "parent_category_id": null
+        }
+    ]
+}
+```
+
+### **6. Get All Products**
+**Endpoint:**  
+
+GET /api/products
+
+**Response Example:** 
+```json
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Updated Product Name",
+            "description": "This is a sample product",
+            "sku": "SKU1234",
+            "price": 79.99,
+            "category_id": 2,
+            "created_at": "2025-03-01T12:00:00.000Z",
+            "updated_at": "2025-03-01T12:45:00.000Z"
+        }
+    ]
 }
 ```
 
